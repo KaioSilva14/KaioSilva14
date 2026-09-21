@@ -1,0 +1,36 @@
+name: Stats card
+
+on:
+  schedule:
+    - cron: "30 6 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/stats.yml
+
+permissions:
+  contents: write
+
+jobs:
+  stats-card:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Generate stats card
+        uses: stats-organization/github-readme-stats-action@v2
+        with:
+          card: stats
+          options: username=KaioSilva14&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&locale=pt-br&bg_color=0D0D10&title_color=1862BA&icon_color=1862BA&text_color=F7F9FC&ring_color=1862BA
+          path: profile/stats.svg
+          token: ${{ secrets.METRICS_TOKEN || secrets.GITHUB_TOKEN }}
+
+      - name: Commit card
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add profile/stats.svg
+          git commit -m "chore: atualiza card de estatísticas" || exit 0
+          git pull --rebase
+          git push
