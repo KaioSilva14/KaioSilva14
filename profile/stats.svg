@@ -8,8 +8,8 @@
         role="img"
         aria-labelledby="descId"
       >
-        <title id="titleId">Estat&#237;sticas do GitHub de KaioSilva14, Rank: C</title>
-        <desc id="descId">Total de estrelas: 12, Total de Commits  : 106, Total de PRs: 7, Total de Issues: 0, Contribuiu para (ano passado): 0</desc>
+        <title id="titleId">Estat&#237;sticas do GitHub de KaioSilva14, Rank: C+</title>
+        <desc id="descId">Total de estrelas: 12, Total de Commits  : 140, Total de PRs: 22, Total de Issues: 0, Contribuiu para (ano passado): 0</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 224.43069139590764;
+        stroke-dashoffset: 212.8185967684685;
       }
     }
   
@@ -150,7 +150,7 @@
         <g class="rank-text">
           
         <text x="-5" y="3" alignment-baseline="central" dominant-baseline="central" text-anchor="middle" data-testid="level-rank-icon">
-          C
+          C+
         </text>
       
         </g>
@@ -184,7 +184,7 @@
         x="274.01"
         y="12.5"
         data-testid="commits"
-      >106</text>
+      >140</text>
     </g>
   </g><g transform="translate(0, 50)">
     <g class="stagger" style="animation-delay: 750ms" transform="translate(25, 0)">
@@ -199,7 +199,7 @@
         x="274.01"
         y="12.5"
         data-testid="prs"
-      >7</text>
+      >22</text>
     </g>
   </g><g transform="translate(0, 75)">
     <g class="stagger" style="animation-delay: 900ms" transform="translate(25, 0)">
